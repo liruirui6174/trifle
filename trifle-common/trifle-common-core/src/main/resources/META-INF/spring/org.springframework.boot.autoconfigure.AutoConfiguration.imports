@@ -1,0 +1,6 @@
+com.ordinary.trifle.common.core.config.TaskExecutorConfiguration
+com.ordinary.trifle.common.core.config.JacksonConfiguration
+com.ordinary.trifle.common.core.config.RedisTemplateConfiguration
+com.ordinary.trifle.common.core.config.RestTemplateConfiguration
+com.ordinary.trifle.common.core.util.SpringContextHolder
+com.ordinary.trifle.common.core.config.WebMvcConfiguration

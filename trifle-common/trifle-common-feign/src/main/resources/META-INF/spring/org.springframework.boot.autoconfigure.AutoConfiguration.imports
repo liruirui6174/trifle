@@ -1,0 +1,3 @@
+com.ordinary.trifle.common.feign.TrifleFeignAutoConfiguration
+com.ordinary.trifle.common.feign.sentinel.SentinelAutoConfiguration
+com.ordinary.trifle.common.feign.sentinel.handle.GlobalBizExceptionHandler

@@ -1,0 +1,6 @@
+com.ordinary.trifle.admin.api.feign.RemoteDictService
+com.ordinary.trifle.admin.api.feign.RemoteDeptService
+com.ordinary.trifle.admin.api.feign.RemoteLogService
+com.ordinary.trifle.admin.api.feign.RemoteTokenService
+com.ordinary.trifle.admin.api.feign.RemoteUserService
+com.ordinary.trifle.admin.api.feign.RemoteParamService

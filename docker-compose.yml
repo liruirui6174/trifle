@@ -1,0 +1,94 @@
+version: '3'
+services:
+  trifle-mysql:
+    build:
+      context: ./db
+    environment:
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_ROOT_PASSWORD: root
+    restart: always
+    container_name: trifle-mysql
+    image: trifle-mysql
+    ports:
+      - 3306:3306
+
+  trifle-redis:
+    image: redis:7.0.0
+    ports:
+      - 6379:6379
+    restart: always
+    container_name: trifle-redis
+    hostname: trifle-redis
+
+  trifle-register:
+    build:
+      context: ./trifle-register
+    restart: always
+    ports:
+      - 8848:8848
+    container_name: trifle-register
+    hostname: trifle-register
+    image: trifle-register
+
+  trifle-gateway:
+    build:
+      context: ./trifle-gateway
+    restart: always
+    ports:
+      - 9999:9999
+    container_name: trifle-gateway
+    hostname: trifle-gateway
+    image: trifle-gateway
+
+  trifle-auth:
+    build:
+      context: ./trifle-auth
+    restart: always
+    container_name: trifle-auth
+    hostname: trifle-auth
+    image: trifle-auth
+
+  trifle-upms:
+    build:
+      context: ./trifle-upms/trifle-upms-biz
+    restart: always
+    container_name: trifle-upms
+    hostname: trifle-upms
+    image: trifle-upms
+
+  trifle-monitor:
+    build:
+      context: ./trifle-visual/trifle-monitor
+    restart: always
+    ports:
+      - 5001:5001
+    container_name: trifle-monitor
+    hostname: trifle-monitor
+    image: trifle-monitor
+
+  trifle-sentinel:
+    build:
+      context: ./trifle-visual/trifle-sentinel-dashboard
+    restart: always
+    image: trifle-sentinel
+    container_name: trifle-sentinel
+    ports:
+      - 5003:5003
+
+  trifle-codegen:
+    build:
+      context: ./trifle-visual/trifle-codegen
+    restart: always
+    container_name: trifle-codegen
+    hostname: trifle-codegen
+    image: trifle-codegen
+
+  trifle-job:
+    build:
+      context: ./trifle-visual/trifle-xxl-job-admin
+    restart: always
+    container_name: trifle-job
+    hostname: trifle-job
+    image: trifle-job
+    ports:
+      - 5004:5004

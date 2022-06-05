@@ -1,0 +1,6 @@
+com.ordinary.trifle.common.security.service.TrifleUserDetailsServiceImpl
+com.ordinary.trifle.common.security.service.TrifleAppUserDetailsServiceImpl
+com.ordinary.trifle.common.security.component.TrifleSecurityInnerAspect
+com.ordinary.trifle.common.security.component.TrifleTokenStoreAutoConfiguration
+com.ordinary.trifle.common.security.component.TrifleTokenStoreAutoCleanSchedule
+com.ordinary.trifle.common.security.component.TrifleSecurityMessageSourceConfiguration
